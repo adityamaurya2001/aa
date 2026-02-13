@@ -26,12 +26,13 @@ const checkoutRoutes = require('./routes/checkoutRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
 const userRoutes = require('./routes/userRoutes');
 const path = require('path');
-const shippingSeeder=require('./utils/shippingSeeder')
+const seedShippingMethods=require('./utils/shippingSeeder')
 const app = express();
 app.use('/uploads', express.static('uploads'));
 // Connect to database
 connectDB();
 testCloudinaryConnection();
+seedShippingMethods();
 // Security middleware
 app.use(helmet());
 // app.use(cors({
