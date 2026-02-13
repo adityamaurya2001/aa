@@ -702,9 +702,6 @@
 // export default Homes;
 
 
-
-
-
 import React, { useState, useEffect } from 'react';
 import { 
   ShoppingCart, 
@@ -768,7 +765,7 @@ const Homes = () => {
       name: "Emily Rodriguez",
       comment: "Professional service and breathtaking bouquets. My go-to flower shop for all occasions!",
       rating: 4,
-      image: "👩‍🦰",
+      image: "👩‍🰡",
       date: "3 days ago"
     }
   ]);
@@ -1363,6 +1360,108 @@ const Homes = () => {
                 </div>
                 <div className="absolute top-1/2 -right-12 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-3xl shadow-xl animate-float">
                   🦋
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NEW BANNER SECTION - Add this right after the Hero section */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 p-1">
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-400/30 via-rose-400/30 to-purple-400/30 animate-pulse"></div>
+              
+              {/* Banner content */}
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  {/* Left side - Text content */}
+                  <div className="space-y-4">
+                    <div className="inline-block">
+                      <span className="bg-gradient-to-r from-pink-100 to-rose-100 text-pink-600 px-4 py-2 rounded-full text-sm font-semibold">
+                        🌸 Premium Collection
+                      </span>
+                    </div>
+                    
+                    <h2 className="text-4xl md:text-5xl font-bold">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-rose-600">
+                        Primmum Look
+                      </span>
+                      <br />
+                      <span className="text-gray-800">Origin Flower</span>
+                      <span className="text-pink-500"> Ho</span>
+                    </h2>
+                    
+                    <p className="text-gray-600 text-lg max-w-md">
+                      Experience the elegance of our premium origin flowers, carefully selected for their exceptional beauty and freshness.
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-4 pt-4">
+                      <Link 
+                        to="/products?category=Premium"
+                        className="group bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2"
+                      >
+                        <span>Discover Premium</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      
+                      <Link 
+                        to="/products?origin=imported"
+                        className="group border-2 border-pink-500 text-pink-600 px-6 py-3 rounded-full font-semibold hover:bg-pink-50 transition-all duration-300"
+                      >
+                        View Collection
+                      </Link>
+                    </div>
+                    
+                    {/* Features */}
+                    <div className="flex items-center space-x-6 pt-6">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                          <Leaf className="w-4 h-4 text-green-600" />
+                        </div>
+                        <span className="text-sm text-gray-600">Fresh Origin</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
+                          <Flower2 className="w-4 h-4 text-pink-600" />
+                        </div>
+                        <span className="text-sm text-gray-600">Premium Quality</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Right side - Image/Flower display */}
+                  <div className="relative h-64 md:h-80">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-4">
+                          <div className="w-24 h-24 bg-gradient-to-br from-pink-200 to-rose-200 rounded-2xl flex items-center justify-center text-5xl shadow-lg transform rotate-6 hover:rotate-12 transition-transform">
+                            🌹
+                          </div>
+                          <div className="w-24 h-24 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-2xl flex items-center justify-center text-5xl shadow-lg transform -rotate-6 hover:rotate-0 transition-transform">
+                            🌻
+                          </div>
+                        </div>
+                        <div className="space-y-4 pt-8">
+                          <div className="w-24 h-24 bg-gradient-to-br from-purple-200 to-pink-200 rounded-2xl flex items-center justify-center text-5xl shadow-lg transform -rotate-12 hover:rotate-0 transition-transform">
+                            🌷
+                          </div>
+                          <div className="w-24 h-24 bg-gradient-to-br from-blue-200 to-indigo-200 rounded-2xl flex items-center justify-center text-5xl shadow-lg transform rotate-12 hover:rotate-6 transition-transform">
+                            💐
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Floating badges */}
+                    <div className="absolute top-0 right-0 bg-white rounded-full px-4 py-2 shadow-lg animate-bounce-slow">
+                      <span className="text-sm font-bold text-pink-600">Premium</span>
+                    </div>
+                    <div className="absolute bottom-0 left-0 bg-white rounded-full px-4 py-2 shadow-lg animate-bounce-slow-delayed">
+                      <span className="text-sm font-bold text-rose-600">Fresh</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
