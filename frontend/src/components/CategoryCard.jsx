@@ -19,18 +19,44 @@
 
 // export default CategoryCard;
 
+// import React from 'react';
+
+// const CategoryCard = ({ category }) => {
+//   const { name, count, icon, color } = category;
+
+//   return (
+//     <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+//       <div className={`${color || 'bg-pink-100'} w-20 h-20 mx-auto rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+//         {icon || '🌸'}
+//       </div>
+//       <h3 className="text-lg font-semibold text-gray-900 mb-2">{name}</h3>
+//       <p className="text-gray-600">{count || 0} items</p>
+//     </div>
+//   );
+// };
+
+// export default CategoryCard;
+
+
+
+
 import React from 'react';
 
-const CategoryCard = ({ category }) => {
-  const { name, count, icon, color } = category;
+const CategoryCard = ({ category = {} }) => {  // Add default empty object
+  const { 
+    name = 'Category',  // Add default values
+    count = 0, 
+    icon = '🌸', 
+    color = 'bg-pink-100' 
+  } = category;
 
   return (
     <div className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
-      <div className={`${color || 'bg-pink-100'} w-20 h-20 mx-auto rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
-        {icon || '🌸'}
+      <div className={`${color} w-20 h-20 mx-auto rounded-full flex items-center justify-center text-4xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+        {icon}
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600">{count || 0} items</p>
+      <p className="text-gray-600">{count} items</p>
     </div>
   );
 };
